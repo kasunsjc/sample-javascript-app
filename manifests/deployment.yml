@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: sampleapp
-        image: aksdemoskasun.azurecr.io/javascript-app:4e01d6a922fe9aae3ae24993a2b6b97538bc276a
+        image: aksdemoskasun.azurecr.io/javascript-app:0f1e8872f17298fb9b09e10d740420e0291bdca1
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
