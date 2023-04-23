@@ -15,7 +15,6 @@ spec:
       labels:
         app: sampleapp
     spec:
-      serviceAccountName: cicd
       containers:
       - name: sampleapp
         image: aksdemoskasun.azurecr.io/javascript-app:83296966dee9c6b151e3b396a778bc48dc4bf85c
