@@ -29,3 +29,7 @@ jobs:
         context: ./app
         push: true
         tags: aksdemoskasun.azurecr.io/javascript-app:${{ github.sha }}
+
+    - name: Update manifest
+      run: |
+        sed -i "s|aksdemoskasun.azurecr.io/javascript-app:TAG|aksdemoskasun.azurecr.io/javascript-app:${{ github.sha }}|g" ./manifests/deployment.yml

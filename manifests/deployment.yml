@@ -18,8 +18,7 @@ spec:
       serviceAccountName: cicd
       containers:
       - name: sampleapp
-        #replace <foobar> with your container registry. Example: contosodemo.azurecr.io
-        image: <foobar>.azurecr.io/azure-pipelines-canary-k8s
+        image: aksdemoskasun.azurecr.io/javascript-app:TAG
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
