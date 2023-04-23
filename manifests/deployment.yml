@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: javascriptsampleapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javascriptsampleapp
+  template:
+    metadata:
+      labels:
+        app: javascriptsampleapp 
+    spec:
+      containers:
+        - name: javascriptsampleapp 
+          image: cloudlifeacr.azurecr.io/javascriptsampleapp
+          ports:
+          - containerPort: 8080
