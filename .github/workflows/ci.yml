@@ -34,3 +34,9 @@ jobs:
       run: |
         sed -i "s|aksdemoskasun.azurecr.io/javascript-app:TAG|aksdemoskasun.azurecr.io/javascript-app:${{ github.sha }}|g" ./manifests/deployment.yml
         cat ./manifests/deployment.yml
+    
+    - name: Commit and push changes
+      uses: devops-infra/action-commit-push@master
+      with:
+        github_token: ${{ github.GITHUB_TOKEN }}
+        commit_message: Update the deployment image tag
