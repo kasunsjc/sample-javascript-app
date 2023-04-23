@@ -18,7 +18,7 @@ spec:
       serviceAccountName: cicd
       containers:
       - name: sampleapp
-        image: aksdemoskasun.azurecr.io/javascript-app:6c0ad828cff7abd60de4a65c5c74a180a242e076
+        image: aksdemoskasun.azurecr.io/javascript-app:aksdemoskasun.azurecr.io/javascript-app:9ce7b7312e6dff8a4ed84fc85892fd23299aa01c
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
