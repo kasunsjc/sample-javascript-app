@@ -37,6 +37,7 @@ jobs:
         sed -i "s|aksdemoskasun.azurecr.io/javascript-app:$version|aksdemoskasun.azurecr.io/javascript-app:${{ github.sha }}|g" ./manifests/deployment.yml
         cat ./manifests/deployment.yml
     
+# Commit and push changes
     - name: Commit and push changes
       uses: devops-infra/action-commit-push@master
       with:
