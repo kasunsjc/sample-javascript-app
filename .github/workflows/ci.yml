@@ -32,7 +32,9 @@ jobs:
 
     - name: Update manifest
       run: |
-        sed -i "s|aksdemoskasun.azurecr.io/javascript-app:TAG|aksdemoskasun.azurecr.io/javascript-app:${{ github.sha }}|g" ./manifests/deployment.yml
+        version=$(cat ./manifests/deployment.yml | grep image: | awk '{print $2}' | awk -F: '{print $2}')
+        echo $version
+        sed -i "s|$version|aksdemoskasun.azurecr.io/javascript-app:${{ github.sha }}|g" ./manifests/deployment.yml
         cat ./manifests/deployment.yml
     
     - name: Commit and push changes
