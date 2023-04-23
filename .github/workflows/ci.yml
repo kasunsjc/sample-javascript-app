@@ -38,5 +38,5 @@ jobs:
     - name: Commit and push changes
       uses: devops-infra/action-commit-push@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PA_TOKEN }}
         commit_message: Update the deployment image tag
